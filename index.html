@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio</title>
+  <!-- Cores: arquivo css/estilo.css, bloco :root no topo -->
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <!--
+    ONDE EDITAR:
+    1) Cores ............... css/estilo.css  (variáveis :root)
+    2) Nome, WhatsApp, itens  js/cardapio.js  (objeto CONFIG no topo)
+    3) Fotos das categorias . imagens/categorias/ (porcoes.jpg, executivos.jpg, promocionais.jpg, pao-frances.jpg, pao-bola.jpg)
+    4) Logo ................. imagens/logo.png
+  -->
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <img id="logo" class="logo" alt="">
+      <div id="logo-fallback" class="logo-fallback" aria-hidden="true">
+        <span id="iniciais-logo"></span>
+      </div>
+      <div>
+        <h1 id="nome-bar"></h1>
+        <p id="slogan-bar"></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <p class="intro">Monte seu pedido no carrinho e envie pelo WhatsApp quando estiver pronto.</p>
+
+    <nav class="nav-categorias" id="nav-categorias" aria-label="Categorias"></nav>
+    <div class="grade-categorias" id="grade-categorias"></div>
+    <div id="secoes"></div>
+
+    <p class="rodape">Cardápio digital • Farias Bar</p>
+  </main>
+
+  <!-- Barra e painel do carrinho — o conteúdo é preenchido pelo JS -->
+  <button type="button" class="barra-carrinho" id="barra-carrinho" hidden>
+    <span id="barra-resumo">Carrinho vazio</span>
+    <span>Ver pedido</span>
+  </button>
+
+  <div class="fundo-carrinho" id="fundo-carrinho" hidden></div>
+  <aside class="painel-carrinho" id="painel-carrinho" hidden>
+    <div class="painel-topo">
+      <h2>Seu pedido</h2>
+      <button type="button" class="fechar-carrinho" id="fechar-carrinho" aria-label="Fechar">×</button>
+    </div>
+    <div class="painel-itens" id="painel-itens"></div>
+    <label class="campo-obs">
+      Observação (opcional)
+      <textarea id="obs-pedido" rows="2" placeholder="Ex.: mesa 4, sem cebola, para viagem..."></textarea>
+    </label>
+    <div class="painel-total">
+      <span>Total</span>
+      <strong id="painel-total">R$ 0,00</strong>
+    </div>
+    <button type="button" class="btn" id="enviar-whatsapp">Enviar pedido no WhatsApp</button>
+    <button type="button" class="btn-limpar" id="limpar-carrinho">Esvaziar carrinho</button>
+  </aside>
+
+  <script src="js/cardapio.js"></script>
+</body>
+</html>
