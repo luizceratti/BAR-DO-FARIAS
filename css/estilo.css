@@ -541,7 +541,7 @@ a {
   border-radius: 10px;
   border: 1px solid var(--cor-borda);
   background: var(--cor-card);
-  color: var(--cor-texto);
+  color: black;
   font-family: inherit;
   resize: vertical;
 }
@@ -555,7 +555,7 @@ a {
 }
 
 .painel-total strong {
-  color: var(--cor-preco);
+  color: black;
 }
 
 .btn-limpar {
