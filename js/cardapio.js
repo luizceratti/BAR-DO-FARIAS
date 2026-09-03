@@ -16,7 +16,7 @@ const CONFIG = {
 
   // Número do WhatsApp com DDI + DDD + número, só dígitos
   // Exemplo: 55 (Brasil) + 11 (DDD) + 999999999
-  whatsapp: "5511999999999",
+  whatsapp: "5511971999893",
 
   // Primeira linha da mensagem que vai para o WhatsApp
   mensagemWhatsApp: "Olá! Gostaria de fazer um pedido no *Farias Bar*.",
@@ -29,7 +29,7 @@ const CONFIG = {
     {
       id: "porcoes",
       nome: "Porções",
-      imagem: "imagens/categorias/porcoes.jpg",
+      imagem: "imagens/categorias/porcoes.jpeg",
       produtos: [
         { nome: "Filé Mignon Grelhado", descricao: "Com catupiry", inteira: 129, meia: 79 },
         { nome: "Filé Mignon", descricao: "Parmegiana aperitivo", inteira: 103, meia: 69 },
@@ -59,7 +59,7 @@ const CONFIG = {
     {
       id: "executivos",
       nome: "Pratos executivos",
-      imagem: "imagens/categorias/executivos.jpg",
+      imagem: "imagens/categorias/executivo.jpeg",
       produtos: [
         { nome: "Filé Mignon Grelhado com Brócolis", descricao: "", preco: 78 },
         { nome: "Contra Filé Grelhado", descricao: "Arroz, farofa e purê", preco: 71 },
@@ -78,7 +78,7 @@ const CONFIG = {
     {
       id: "promocionais",
       nome: "Pratos promocionais",
-      imagem: "imagens/categorias/promocionais.jpg",
+      imagem: "imagens/categorias/promocionais.jpeg",
       aviso: "Troca de guarnição: adicional de R$ 5,00 (adicione no pedido se quiser trocar).",
       produtos: [
         { nome: "Bife à Parmegiana", descricao: "", preco: 47 },
@@ -99,7 +99,7 @@ const CONFIG = {
     {
       id: "pao-frances",
       nome: "Lanches no pão francês",
-      imagem: "imagens/categorias/pao-frances.jpg",
+      imagem: "imagens/categorias/pao-frances.jpeg",
       produtos: [
         { nome: "Filé 3 Queijos", descricao: "", preco: 36 },
         { nome: "Bauru de Filé", descricao: "", preco: 36 },
@@ -120,7 +120,7 @@ const CONFIG = {
     {
       id: "pao-bola",
       nome: "Lanches no pão bola",
-      imagem: "imagens/categorias/pao-bola.jpg",
+      imagem: "imagens/categorias/pao-bola.jpeg",
       produtos: [
         { nome: "X-Tudo", descricao: "", preco: 44 },
         { nome: "Americano de Presunto", descricao: "", preco: 42.5 },
@@ -411,6 +411,11 @@ function montarPagina() {
     logo.style.display = "none";
     document.getElementById("logo-fallback").classList.add("visivel");
   };
+
+  var favicon = document.querySelector('link[rel="icon"]');
+  var apple = document.querySelector('link[rel="apple-touch-icon"]');
+  if (favicon) favicon.href = CONFIG.logo;
+  if (apple) apple.href = CONFIG.logo;
 
   var nav = document.getElementById("nav-categorias");
   var grade = document.getElementById("grade-categorias");
